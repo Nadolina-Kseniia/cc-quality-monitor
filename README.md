@@ -9,14 +9,14 @@
 
 ## Стек
 - **PostgreSQL 16** (в проде — GreenPlum, синтаксис совместим)
-- **Python 3.11**: pandas, numpy, sqlalchemy, matplotlib
+- **Python 3.14**: pandas, numpy, sqlalchemy, matplotlib
 - **Docker**, Git
 - **AI-ассистент** (DeepSeek) — использован для рефакторинга SQL и генерации документации
 
 ## Быстрый старт
 ```bash
 docker compose up -d
-psql -h localhost -U postgres -d cc_quality -f sql/01_schema.sql
+Get-Content sql/01_schema.sql -Raw | docker compose exec -T db psql -U postgres -d cc_quality
 python data/generate_data.py
 python scripts/load_to_db.py
 python run.py
