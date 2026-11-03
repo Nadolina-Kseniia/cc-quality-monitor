@@ -1,0 +1,7 @@
+HashAggregate  (cost=22.47..24.13 rows=166 width=12) (actual time=0.005..0.005 rows=0 loops=1)
+  Group Key: operator_id
+  Batches: 1  Memory Usage: 40kB
+  ->  Seq Scan on calls  (cost=0.00..21.00 rows=293 width=4) (actual time=0.003..0.003 rows=0 loops=1)
+        Filter: (start_time >= '2026-10-15 00:00:00'::timestamp without time zone)
+Planning Time: 0.201 ms
+Execution Time: 0.052 ms

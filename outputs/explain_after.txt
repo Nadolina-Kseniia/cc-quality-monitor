@@ -1,0 +1,9 @@
+HashAggregate  (cost=21.55..23.21 rows=166 width=12) (actual time=0.017..0.017 rows=0 loops=1)
+  Group Key: operator_id
+  Batches: 1  Memory Usage: 40kB
+  ->  Bitmap Heap Scan on calls  (cost=6.42..20.08 rows=293 width=4) (actual time=0.015..0.015 rows=0 loops=1)
+        Recheck Cond: (start_time >= '2026-10-15 00:00:00'::timestamp without time zone)
+        ->  Bitmap Index Scan on idx_calls_start  (cost=0.00..6.35 rows=293 width=0) (actual time=0.010..0.010 rows=0 loops=1)
+              Index Cond: (start_time >= '2026-10-15 00:00:00'::timestamp without time zone)
+Planning Time: 0.221 ms
+Execution Time: 0.104 ms
