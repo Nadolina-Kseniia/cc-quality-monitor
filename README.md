@@ -22,6 +22,13 @@ python scripts/load_to_db.py
 python run.py
 ```
 
+## Пример работы (визуализация)
+График топ-5 операторов по количеству ошибок:
+![Топ операторов](outputs/top_operators.png)
+
+Динамика накопления ошибок по дням (топ-3 худших оператора):
+![Накопленные ошибки](outputs/cum_errors_top3.png)
+
 ## Что демонстрирует проект
 - SQL: оконные функции (`RANK`, `SUM OVER`), CTE, `CREATE TEMP TABLE`, индексы + `EXPLAIN ANALYZE`
 - pandas: `merge`, `groupby`+`transform`, `cumsum`, `unstack`, `np.where`, `str.join`, `str.split`, `.loc/.iloc`
