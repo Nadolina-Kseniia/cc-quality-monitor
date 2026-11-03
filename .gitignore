@@ -1,0 +1,8 @@
+﻿git checkout -b main
+git branch -D feature/data-generator feature/sql-analysis feature/python-analysis.venv/
+.idea/
+.env
+__pycache__/
+*.pyc
+data/*.csv
+outputs/*
